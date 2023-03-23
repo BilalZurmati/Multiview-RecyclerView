@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.zurmati.multiviewrecyclerview.adapter.MultiViewAdapter
 import com.zurmati.multiviewrecyclerview.databinding.ActivityMainBinding
+import com.zurmati.multiviewrecyclerview.models.ImageModel
+import com.zurmati.multiviewrecyclerview.models.TextModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,13 +23,13 @@ class MainActivity : AppCompatActivity() {
 
     fun getItems(): MutableList<Any> {
         return mutableListOf(
-            "Hello guys! My name is Muhammad Bilal, I am an android developer with 4 years of experience.",
-            "Hello guys! My name is Muhammad Bilal, I am an android developer with 4 years of experience.",
-            "Hello guys! My name is Muhammad Bilal, I am an android developer with 4 years of experience.",
-            R.drawable.channel,
-            "Hello guys! My name is Muhammad Bilal, I am an android developer with 4 years of experience.",
-            "Hello guys! My name is Muhammad Bilal, I am an android developer with 4 years of experience.",
-            R.drawable.channel,
+            TextModel("Muhammad Bilal", "Android Developer", R.drawable.man_standing_with_tennis_ball),
+            TextModel("Muhammad Bilal", "Android Developer", R.drawable.man_standing_with_tennis_ball),
+            ImageModel("This is just dummy description about this image", R.drawable.car),
+            TextModel("Muhammad Bilal", "Android Developer", R.drawable.man_standing_with_tennis_ball),
+            ImageModel("This is just dummy description about this image", R.drawable.channel),
+            ImageModel("This is just dummy description about this image", R.drawable.channel),
+            TextModel("Muhammad Bilal", "Android Developer", R.drawable.man_standing_with_tennis_ball),
         )
     }
 }

@@ -7,14 +7,45 @@
     app:cardCornerRadius="8dp"
     app:cardElevation="5dp">
 
-    <TextView
-        android:gravity="center"
-        android:padding="10dp"
-        android:background="@color/black"
-        android:id="@+id/txt"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/round_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/round_card" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/round_image"
+            app:layout_constraintTop_toTopOf="@+id/round_image" />
+
+        <TextView
+            android:id="@+id/txt_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/txt_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/round_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.cardview.widget.CardView>

@@ -13,4 +13,9 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="round_card" parent="">
+        <item name="cornerSize">100%</item>
+    </style>
 </resources>
